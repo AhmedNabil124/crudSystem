@@ -1,0 +1,14 @@
+#addEdit,.alert{display: none;}
+ @media (max-width:600px) {
+    .tableResponsive{
+    width: 100% !important;
+}
+#searchInput{
+    width: 80% !important;
+}
+} 
+
+
+.crudHead{
+    background-color: #414141 !important;
+}
