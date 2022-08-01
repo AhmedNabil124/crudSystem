@@ -1,0 +1,15 @@
+body{
+    background-color: #f7f7f7;
+}
+#alertName,#alertPrice{
+    display: none;
+}
+
+@media (max-width:600px) {
+    .tableResponsive{
+    width: 100% !important;
+}
+#searchInput{
+    width: 80% !important;
+}
+} 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>crudSystem</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="w-75 mx-auto py-4">
+            <h2 class="py-4 fw-bold text-center">Product Managment System</h2>
+
+
+            <label for="productNameInput" class="pb-2">productName : </label>
+            <input type="text" class="form-control mb-3 " oninput="validateProductName()" id="productNameInput">
+            <div class="alert alert-danger" id="alertName">
+                <p>Enter Valid Name Start With One UpperCase Between 3 and 8</p>
+              </div>
+
+            <label for="productPriceInput" class="pb-2">productPrice : </label>
+            <input type="number" class="form-control mb-3 " oninput=" validateProductPrice()" id="productPriceInput">
+            <div class="alert alert-danger" id="alertPrice">
+                <p>Enter Valid Price</p>
+              </div>
+            <label for="productCategoryInput" class="pb-2">productCategory : </label>
+            <input type="text" class="form-control mb-3" id="productCategoryInput">
+
+            <label for="productDescriptionInput" class="pb-2">productDescription : </label>
+            <textarea type="text" class="form-control mb-3" id="productDescriptionInput"></textarea>
+
+
+            <button id="addBtn" onclick="addProduct()" class="btn btn-outline-info">Add Product</button>
+            <button id="updateBtn" onclick="addEditUpdate()" class="btn btn-outline-info d-none">Update Product</button>
+        </div>
+
+        <div class="w-75 mx-auto p-4">
+            <label for="search" class="my-3">Search : </label>
+            <input type="text" oninput="searchProduct(this.value)" placeholder="Search By Name..." class="form-control mb-3" id="search">
+        </div>
+
+        <div style="overflow-x:auto;" class="tableResponsive">
+            <table class="table w-75 mx-auto">
+                <thead>
+                    <th>#</th>
+                    <th>productName</th>
+                    <th>productPrice</th>
+                    <th>productCategory</th>
+                    <th>productDescription</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+        <script src="js/main.js" ></script>
+    </body>
+</html>
